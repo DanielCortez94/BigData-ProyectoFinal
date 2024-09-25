@@ -5,6 +5,11 @@
 			"referenceName": "Conector_AzureDataLakeStorageADLS_DataFactory",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Archivo_input": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
