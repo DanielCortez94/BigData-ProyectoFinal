@@ -16,10 +16,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "Archivos_input",
-						"type": "DatasetReference"
-					},
 					"fieldList": [
 						"childItems"
 					],
