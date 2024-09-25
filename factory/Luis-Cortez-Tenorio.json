@@ -1,0 +1,9 @@
+{
+	"name": "Luis-Cortez-Tenorio",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8c7a2465-8530-48cb-8f1b-a35c1a6ae272",
+		"tenantId": "2698110e-9e5f-49a6-99f2-da9e74e2f550"
+	}
+}
