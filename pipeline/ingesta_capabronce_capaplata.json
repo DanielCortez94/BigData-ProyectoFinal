@@ -1,0 +1,7 @@
+{
+	"name": "ingesta_capabronce_capaplata",
+	"properties": {
+		"description": "ingesta de archivos desde capa bronce hasta capa plata",
+		"annotations": []
+	}
+}
