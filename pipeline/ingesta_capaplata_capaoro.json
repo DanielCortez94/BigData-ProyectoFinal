@@ -1,10 +1,9 @@
 {
-	"name": "ingesta_capabronce_capaplata",
+	"name": "ingesta_capaplata_capaoro",
 	"properties": {
-		"description": "ingesta de archivos desde capa bronce hasta capa plata",
 		"activities": [
 			{
-				"name": "Ingesta_capabronce_capaplata",
+				"name": "Ingesta_capaplata_capaoro",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
