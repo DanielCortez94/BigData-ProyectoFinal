@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Execute Pipeline1",
+				"name": "Ingesta_input_capabronce",
 				"type": "ExecutePipeline",
 				"dependsOn": [],
 				"policy": {
@@ -19,11 +19,11 @@
 				}
 			},
 			{
-				"name": "Execute Pipeline2",
+				"name": "Ingesta_capabronce_capaplata",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline1",
+						"activity": "Ingesta_input_capabronce",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -42,11 +42,11 @@
 				}
 			},
 			{
-				"name": "Execute Pipeline3",
+				"name": "Ingesta_capaplata_capaoro",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Execute Pipeline2",
+						"activity": "Ingesta_capabronce_capaplata",
 						"dependencyConditions": [
 							"Succeeded"
 						]
