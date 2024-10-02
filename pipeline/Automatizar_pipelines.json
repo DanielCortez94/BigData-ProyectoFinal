@@ -9,7 +9,7 @@
 					{
 						"activity": "Ingesta_input_capabronce",
 						"dependencyConditions": [
-							"Completed"
+							"Succeeded"
 						]
 					}
 				],
@@ -32,7 +32,7 @@
 					{
 						"activity": "Ingesta_capabronce_plata",
 						"dependencyConditions": [
-							"Completed"
+							"Succeeded"
 						]
 					}
 				],
