@@ -14,7 +14,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/danielcortezt94@gmail.com/Ingesta_capa_bronce_capa_plata"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks_DataFactory",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
