@@ -3,11 +3,27 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Ingesta_capabronce_plata",
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_input_capabronce",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Execute Pipeline2",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Ingesta_input_capabronce",
+						"activity": "Execute Pipeline1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -26,11 +42,11 @@
 				}
 			},
 			{
-				"name": "Ingesta_capaplata_capaoro",
+				"name": "Execute Pipeline3",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
-						"activity": "Ingesta_capabronce_plata",
+						"activity": "Execute Pipeline2",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -43,22 +59,6 @@
 				"typeProperties": {
 					"pipeline": {
 						"referenceName": "ingesta_capaplata_capaoro",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
-			},
-			{
-				"name": "Ingesta_input_capabronce",
-				"type": "ExecutePipeline",
-				"dependsOn": [],
-				"policy": {
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "ingesta_input_capabronce",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
