@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Luis-Cortez-Tenorio"
+		},
+		"AzureDatabricks_DataFactory_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricks_DataFactory1_accessToken": {
+			"value": ""
+		},
+		"Conector_AzureDataLakeStorageADLS_DataFactory_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks_DataFactory_properties_typeProperties_existingClusterId": {
+			"value": "0929-155042-j2k4lpig"
+		},
+		"AzureDatabricks_DataFactory1_properties_typeProperties_existingClusterId": {
+			"value": "0929-155042-j2k4lpig"
+		},
+		"Conector_AzureDataLakeStorageADLS_DataFactory_properties_typeProperties_url": {
+			"value": "https://corteztenorio.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
