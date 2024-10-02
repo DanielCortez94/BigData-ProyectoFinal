@@ -429,7 +429,24 @@
 			"properties": {
 				"activities": [
 					{
-						"name": "Ingesta_capabronce_plata",
+						"name": "Ingesta_input_capabronce",
+						"type": "ExecutePipeline",
+						"dependsOn": [],
+						"policy": {
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"pipeline": {
+								"referenceName": "ingesta_input_capabronce",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {}
+						}
+					},
+					{
+						"name": "Ingesta_capabronce_capaplata",
 						"type": "ExecutePipeline",
 						"dependsOn": [
 							{
@@ -457,7 +474,7 @@
 						"type": "ExecutePipeline",
 						"dependsOn": [
 							{
-								"activity": "Ingesta_capabronce_plata",
+								"activity": "Ingesta_capabronce_capaplata",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -475,23 +492,6 @@
 							"waitOnCompletion": true,
 							"parameters": {}
 						}
-					},
-					{
-						"name": "Ingesta_input_capabronce",
-						"type": "ExecutePipeline",
-						"dependsOn": [],
-						"policy": {
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"pipeline": {
-								"referenceName": "ingesta_input_capabronce",
-								"type": "PipelineReference"
-							},
-							"waitOnCompletion": true,
-							"parameters": {}
-						}
 					}
 				],
 				"policy": {
@@ -500,9 +500,9 @@
 				"annotations": []
 			},
 			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/ingesta_input_capabronce')]",
 				"[concat(variables('factoryId'), '/pipelines/ingesta_capabronce_capaplata')]",
-				"[concat(variables('factoryId'), '/pipelines/ingesta_capaplata_capaoro')]",
-				"[concat(variables('factoryId'), '/pipelines/ingesta_input_capabronce')]"
+				"[concat(variables('factoryId'), '/pipelines/ingesta_capaplata_capaoro')]"
 			]
 		},
 		{
